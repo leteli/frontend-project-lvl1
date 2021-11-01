@@ -9,7 +9,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '17'
-      - run: |
-          make install
-      - run: |
-          make lint
+      - run: make install
+      - run: make lint
