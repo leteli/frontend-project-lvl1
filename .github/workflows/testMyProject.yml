@@ -1,8 +1,15 @@
-name: testMyProject
+name: test-my-project
 on: push
+
 jobs:
-  my-job:
+  linter-check:
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
-        run: npx eslint .
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '17'
+      - run: |
+          make install
+      - run: |
+          make lint
