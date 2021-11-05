@@ -29,7 +29,7 @@ const pairGenerator = () => {
   const num1 = getRndmIntegerFrom1To100();
   const step = getRndmIntegerFrom1To10();
   const missingIndex = getNumFrom0To9();
-  const expression = `${buildProgressionWithMissingNum(num1, step, missingIndex)}`;
+  const expression = `${buildProgressionWithMissingNum(num1, step, missingIndex).join(' ')}`;
   const correctAnswer = getMissingNum(num1, step, missingIndex).toString();
   const pair = [expression, correctAnswer];
   return pair;
