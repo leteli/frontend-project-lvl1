@@ -10,7 +10,7 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "type": "module",
-  "description": "[![Actions Status](https://github.com/leteli/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/leteli/frontend-project-lvl1/actions)",
+  "description": "First frontend project at Hexlet with 5 console math games",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
