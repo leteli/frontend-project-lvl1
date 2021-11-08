@@ -1,8 +1,6 @@
-import brainGamesLogic from '../index.js';
+import { getRandomInteger, brainGamesLogic } from '../index.js';
 
 const ruleSentence = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-const getRndmIntegerFrom1To100 = () => Math.floor(Math.random() * 100) + 1;
 
 const isPrime = (num) => {
   if (num === 1) {
@@ -20,7 +18,7 @@ const isPrime = (num) => {
 };
 
 const getGameData = () => {
-  const number = getRndmIntegerFrom1To100();
+  const number = getRandomInteger(1, 100);
   const expression = `${number}`;
   const correctAnswer = isPrime(number);
   const pair = [expression, correctAnswer];

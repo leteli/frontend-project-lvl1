@@ -1,8 +1,6 @@
-import brainGamesLogic from '../index.js';
+import { getRandomInteger, brainGamesLogic } from '../index.js';
 
 const ruleSentence = 'Find the greatest common divisor of given numbers.';
-
-const getRndmIntegerFrom1To100 = () => Math.floor(Math.random() * 100) + 1;
 
 const getGCD = (num1, num2) => {
   let gcd;
@@ -15,8 +13,8 @@ const getGCD = (num1, num2) => {
 };
 
 const getGameData = () => {
-  const firstNum = getRndmIntegerFrom1To100();
-  const secondNum = getRndmIntegerFrom1To100();
+  const firstNum = getRandomInteger(1, 100);
+  const secondNum = getRandomInteger(1, 100);
   const expression = `${firstNum} ${secondNum}`;
   const correctAnswer = getGCD(firstNum, secondNum).toString();
   const pair = [expression, correctAnswer];

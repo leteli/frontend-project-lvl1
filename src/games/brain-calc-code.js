@@ -1,11 +1,8 @@
-import brainGamesLogic from '../index.js';
+import { getRandomInteger, brainGamesLogic } from '../index.js';
 
 const ruleSentence = 'What is the result of the expression?';
 
-const getRndmIntegerFrom1To100 = () => Math.floor(Math.random() * 100) + 1;
-
 const operators = ['+', '-', '*'];
-const getRandomIndex = () => Math.floor(Math.random() * operators.length);
 
 const calculate = (num1, oper, num2) => {
   switch (oper) {
@@ -21,9 +18,9 @@ const calculate = (num1, oper, num2) => {
 };
 
 const getGameData = () => {
-  const firstOperand = getRndmIntegerFrom1To100();
-  const secondOperand = getRndmIntegerFrom1To100();
-  const operator = operators[getRandomIndex()];
+  const firstOperand = getRandomInteger(1, 100);
+  const secondOperand = getRandomInteger(1, 100);
+  const operator = operators[getRandomInteger(0, 2)];
   const expression = `${firstOperand} ${operator} ${secondOperand}`;
   const correctAnswer = calculate(firstOperand, operator, secondOperand).toString();
   const pair = [expression, correctAnswer];

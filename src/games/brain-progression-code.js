@@ -1,15 +1,13 @@
-import brainGamesLogic from '../index.js';
+import { getRandomInteger, brainGamesLogic } from '../index.js';
 
 const ruleSentence = 'What number is missing in the progression?';
 
-const getRndmIntegerFrom1To100 = () => Math.floor(Math.random() * 100) + 1;
-const getRndmIntegerFrom1To10 = () => Math.floor(Math.random() * 10) + 1;
-const getNumFrom0To9 = () => Math.floor(Math.random() * 10);
+const progressionNumbersCount = 10;
 
 const buildProgressionWithMissingNum = (num1, step, missingIndex) => {
   const progression = [];
   let item = num1;
-  for (let i = 0; i <= 9; i += 1) {
+  for (let i = 0; i <= (progressionNumbersCount - 1); i += 1) {
     progression[i] = item;
     item += step;
   }
@@ -20,7 +18,7 @@ const buildProgressionWithMissingNum = (num1, step, missingIndex) => {
 const getMissingNum = (num1, step, missingIndex) => {
   const progression = [];
   let item = num1;
-  for (let i = 0; i <= 9; i += 1) {
+  for (let i = 0; i <= (progressionNumbersCount - 1); i += 1) {
     progression[i] = item;
     item += step;
   }
@@ -28,9 +26,9 @@ const getMissingNum = (num1, step, missingIndex) => {
 };
 
 const getGameData = () => {
-  const num1 = getRndmIntegerFrom1To100();
-  const step = getRndmIntegerFrom1To10();
-  const missingIndex = getNumFrom0To9();
+  const num1 = getRandomInteger(1, 100);
+  const step = getRandomInteger(1, 10);
+  const missingIndex = getRandomInteger(0, 9);
   const expression = `${buildProgressionWithMissingNum(num1, step, missingIndex).join(' ')}`;
   const correctAnswer = getMissingNum(num1, step, missingIndex).toString();
   const pair = [expression, correctAnswer];
