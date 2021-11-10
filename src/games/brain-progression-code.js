@@ -4,25 +4,26 @@ const ruleSentence = 'What number is missing in the progression?';
 
 const progressionNumbersCount = 10;
 
-const buildProgressionWithMissingNum = (num1, step, missingIndex) => {
+const buildProgression = (num1, step) => {
   const progression = [];
   let item = num1;
   for (let i = 0; i <= (progressionNumbersCount - 1); i += 1) {
     progression[i] = item;
     item += step;
   }
-  progression[missingIndex] = '..';
   return progression;
 };
 
 const getMissingNum = (num1, step, missingIndex) => {
-  const progression = [];
-  let item = num1;
-  for (let i = 0; i <= (progressionNumbersCount - 1); i += 1) {
-    progression[i] = item;
-    item += step;
-  }
-  return progression[missingIndex];
+  const progression = buildProgression(num1, step);
+  const missingNum = progression[missingIndex];
+  return missingNum;
+};
+
+const buildProgressionWithMissingNum = (num1, step, missingIndex) => {
+  const progression = buildProgression(num1, step);
+  progression[missingIndex] = '..';
+  return progression;
 };
 
 const getGameData = () => {
