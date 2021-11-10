@@ -11,7 +11,7 @@
   },
   "type": "module",
   "description": "First frontend project at Hexlet with 5 console math games",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
