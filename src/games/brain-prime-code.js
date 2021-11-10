@@ -4,23 +4,23 @@ const ruleSentence = 'Answer "yes" if given number is prime. Otherwise answer "n
 
 const isPrime = (num) => {
   if (num === 1) {
-    return 'no';
+    return false;
   }
   if (num === 2) {
-    return 'yes';
+    return true;
   }
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
 const getGameData = () => {
   const number = getRandomInteger(1, 100);
   const expression = `${number}`;
-  const correctAnswer = isPrime(number);
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
   const pair = [expression, correctAnswer];
   return pair;
 };
