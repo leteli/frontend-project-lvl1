@@ -10,8 +10,7 @@ export const brainGamesLogic = (ruleSentence, getGameData) => {
   console.log(`Hello, ${userName}!`);
   console.log(ruleSentence);
   for (let i = 1; i <= gameRoundsCount; i += 1) {
-    const pair = getGameData();
-    const [expression, correctAnswer] = pair;
+    const [expression, correctAnswer] = getGameData();
     console.log(`Question: ${expression}`);
     const answer = readlineSync.question('Your answer: ');
     if (correctAnswer === answer) {
