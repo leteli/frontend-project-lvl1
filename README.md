@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/leteli/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/leteli/frontend-project-lvl1/actions)
 <a href="https://codeclimate.com/github/leteli/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/c45301ca1fde0075b60d/maintainability" /></a>
-![test-my-project](https://github.com/leteli/frontend-project-lvl1/actions/workflows/testMyProject.yml/badge.svg)
+[![test-my-project](https://github.com/leteli/frontend-project-lvl1/actions/workflows/testMyProject.yml/badge.svg)](https://github.com/leteli/frontend-project-lvl1/actions/workflows/testMyProject.yml)
 
 This project includes 5 console mathematical games created in javascript. A player has to answer questions via console, so it is required to have a shell and nodejs installed to be able to play. To win a game it is necessary to answer 3 questions in a row correctly. 
 How to install the game:
