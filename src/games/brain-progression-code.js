@@ -13,8 +13,9 @@ const buildProgression = (num1, step, length) => {
 const getGameData = () => {
   const num1 = getRandomInteger(1, 100);
   const step = getRandomInteger(1, 10);
+  const length = 10;
   const missingIndex = getRandomInteger(0, 9);
-  const progression = buildProgression(num1, step, 10);
+  const progression = buildProgression(num1, step, length);
   const correctAnswer = progression[missingIndex].toString();
   progression[missingIndex] = '..';
   const expression = `${progression.join(' ')}`;
