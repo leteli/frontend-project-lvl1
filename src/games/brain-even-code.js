@@ -6,10 +6,10 @@ const isEven = (num) => num % 2 === 0;
 
 const getGameData = () => {
   const number = getRandomInteger(1, 100);
-  const expression = `${number}`;
+  const expression = number.toString();
   const correctAnswer = isEven(number) ? 'yes' : 'no';
-  const pair = [expression, correctAnswer];
-  return pair;
+  const gameData = [expression, correctAnswer];
+  return gameData;
 };
 
 const isEvenGame = () => {

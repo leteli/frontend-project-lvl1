@@ -23,8 +23,8 @@ const getGameData = () => {
   const operator = operators[getRandomInteger(0, 2)];
   const expression = `${firstOperand} ${operator} ${secondOperand}`;
   const correctAnswer = calculate(firstOperand, operator, secondOperand).toString();
-  const pair = [expression, correctAnswer];
-  return pair;
+  const gameData = [expression, correctAnswer];
+  return gameData;
 };
 
 const calcGame = () => {

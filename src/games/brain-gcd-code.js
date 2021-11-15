@@ -17,8 +17,8 @@ const getGameData = () => {
   const secondNum = getRandomInteger(1, 100);
   const expression = `${firstNum} ${secondNum}`;
   const correctAnswer = getGCD(firstNum, secondNum).toString();
-  const pair = [expression, correctAnswer];
-  return pair;
+  const gameData = [expression, correctAnswer];
+  return gameData;
 };
 
 const gcdGame = () => {

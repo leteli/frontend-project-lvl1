@@ -18,9 +18,9 @@ const getGameData = () => {
   const progression = buildProgression(num1, step, length);
   const correctAnswer = progression[missingIndex].toString();
   progression[missingIndex] = '..';
-  const expression = `${progression.join(' ')}`;
-  const pair = [expression, correctAnswer];
-  return pair;
+  const expression = progression.join(' ');
+  const gameData = [expression, correctAnswer];
+  return gameData;
 };
 
 const progressionGame = () => {

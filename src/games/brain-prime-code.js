@@ -19,10 +19,10 @@ const isPrime = (num) => {
 
 const getGameData = () => {
   const number = getRandomInteger(1, 100);
-  const expression = `${number}`;
+  const expression = number.toString();
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  const pair = [expression, correctAnswer];
-  return pair;
+  const gameData = [expression, correctAnswer];
+  return gameData;
 };
 
 const primeGame = () => {
