@@ -3,11 +3,8 @@ import { getRandomInteger, brainGamesLogic } from '../index.js';
 const ruleSentence = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
-  if (num === 1) {
+  if (num < 2) {
     return false;
-  }
-  if (num === 2) {
-    return true;
   }
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
